@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: url(../imagens/fundo_pagina_c-l.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cabecalho {
+    background-image: url(../imagens/fundo_white.jpg);
+    /* background: #f8f8ff; */
+    width: 100%;
+    height: 80px;
+    border-bottom: 5px solid rgb(89, 9, 9);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.caixa {
+    max-width: 1095px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.cabecalho img {
+    width: 73px;
+    float: left;
+}
+
+.cabecalho nav {
+    float: right;
+    padding-top: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+.re {
+    font-size: xx-large;
+    color: rgb(82, 2, 2);
+    font-family: initial;
+    font-style: italic;
+    font-weight: 700;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+}
+
+ul li {
+    color: rgb(2, 2, 2);
+    display: inline;
+    margin-left: 15px;
+    font-size: larger;
+    font: caption;
+    font-weight: 700;
+    font-family: Helvetica;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+}
+
+.home {
+    text-transform: uppercase;
+    color: rgb(89, 9, 9);
+    text-decoration: none;
+}
+
+a {
+    text-transform: uppercase;
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+}
+
+.container_login {
+    background-image: url(../imagens/fundo-de-textura-de-metal_46250-1743.jpg);
+    text-align: center;
+    position: absolute;
+    margin-left: 40%;
+    margin-top: 15%;
+    border-radius: 3%;
+    width: 300px;
+    height: 150px;
+}
+
+.simbolo {
+    position: absolute;
+    margin-left: -49%;
+    margin-top: 3%;
+    height: 50px;
+}
+
+.text {
+    margin-left: 45px;
+}
+
+.inp_login {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    margin-top: 10px;
+    border-radius: 2%;
+}
+
+.sn {
+    color: rgba(170, 162, 162, 0);
+}
+
+h6 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    position: absolute;
+    margin-left: 48%;
+    margin-top: 32%;
+}
