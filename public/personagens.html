@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/personagens.css">
     <link rel="shortcut icon" href="./imagens/simbolo_umbrella_cabecalho.png" type="image/x-icon">
     <title>Resident Evil</title>
 </head>
@@ -18,9 +18,10 @@
           </span>
             <nav>
                 <ul>
-                    <li>HOME</li>
-                    <li><a href="login.html"> LOGIN</a></li>
                     <li>
+                        <a href="index.html"></a> HOME</li>
+                    <li><a href="login.html"> LOGIN</a></li>
+                    <li class="per">
                         <a href="personagens.html"></a> PERSONAGENS</li>
                     <li>SOBRE </li>
                     <li>RUNS</li>
@@ -28,6 +29,87 @@
             </nav>
         </div>
     </div>
+    <div class="caixa">
+        <button id="prota" class="pro" onclick="protagonistas()"><h1>Ver <br> Protagonistas</h1></button>
+        <button id="antag" class="ant" onclick="antagonistas()"><h1>Ver <br> Antagonistas</h1></button>
+    </div>
+    <!-- chris_redfield começo -->
+    <span class="caixa1" id="per1" style="display: none;">
+        <img class="img" src="imagens/chris_redfield.jpg" id="img" alt=""><br>
+        <span id="bio">
+        <span class="info" >
+            Nome: Chris Redfield  </span><br><br><span class="info"> Data de Nascimento: 1973</span> <br><br><span class="info"> Gênero: Masculino</span><br> <br> <span class="info">Altura: 1,85m</span><button class="mais" onclick="mais()">+</button><br><br>
+    <span class="info"> Peso: 98 kg </span><br><br>
+    <span class="info">R/N: Caucasiano/Americano</span><br> <br><span class="info"> Ocupação Atual: Capitão do</span><br><span class="info"> Esquadrão Lobo de Caça</span>
+    </span>
+    <button class="menos" id="mns" style="display: none;" onclick="menos()">-</button>
+    <span id='his' style="display: none;">Não se sabe muito sobre a infância de Redfield, além de que ele e Claire Redfield foram criados em Nova Iorque após terem perdido os pais em algum momento antes de 1998, tendo apenas um ao outro como família. Ao alcançar a maior idade, Redfield ingressou na Força Aérea dos Estados Unidos, onde recebeu treinamento para pilotar aviões e helicópteros, além de treinar para usar uma ampla variedade de armas, incluindo facas, ficando principalmente conhecido por seu combate corpo-a-corpo e pontaria pelas quais chegou a ganhar um concurso. Durante esse período, ele serviu em uma unidade ao lado de Barry Burton, que se tornou seu amigo íntimo e mentor. No geral, embora seu caráter direto fosse adequado para um piloto e ele se mostrasse muito promissor na aeronáutica, Redfield mantinha fortes convicções que o colocavam em desacordo com seus oficiais seniores, culminando com ele sendo dispensado do exército em 1995, embora seja incerto se a dispensa ocorrera por sua renuncia ou por insubordinação</span>
+    </span>
+    <!-- chris_redfield final -->
+    <!-- jill_valentine -->
+    <span class="caixa2" id="per2" style="display: none;">
+        <img class="img1" src="imagens/jill_valentine.jpg" id="img1" alt=""><br>
+        <span id="bio1">
+    <span class="info" >
+        Nome: Jill Valentine  </span><br><br><span class="info"> Data de Nascimento: 1974</span> <br><br><span class="info"> Gênero: Feminino</span><br> <br> <span class="info">Altura: 1,65m</span><button class="mais1" onclick="mais1()">+</button><br><br>
+    <span class="info"> Peso: 56 kg </span><br><br>
+    <span class="info">R/N: 
+        Caucasiana/Americana (ascendência mista franco-japonesa)</span><br> <br><span class="info"> Ocupação Atual: S.O.A. da B.S.A.A.</span>
+    <button class="menos1" id="mns1" style="display: none;" onclick="menos1()">-</button>
+    <span id='his1' style="display: none;">Não se sabe muito sobre a infância de Redfield, além de que ele e Claire Redfield foram criados em Nova Iorque após terem perdido os pais em algum momento antes de 1998, tendo apenas um ao outro como família. Ao alcançar a maior idade, Redfield ingressou na Força Aérea dos Estados Unidos, onde recebeu treinamento para pilotar aviões e helicópteros, além de treinar para usar uma ampla variedade de armas, incluindo facas, ficando principalmente conhecido por seu combate corpo-a-corpo e pontaria pelas quais chegou a ganhar um concurso. Durante esse período, ele serviu em uma unidade ao lado de Barry Burton, que se tornou seu amigo íntimo e mentor. No geral, embora seu caráter direto fosse adequado para um piloto e ele se mostrasse muito promissor na aeronáutica, Redfield mantinha fortes convicções que o colocavam em desacordo com seus oficiais seniores, culminando com ele sendo dispensado do exército em 1995, embora seja incerto se a dispensa ocorrera por sua renuncia ou por insubordinação</span>
+    </span>
+    <!-- jill_valentine final -->
+
+
+
+    <!-- <div class="cabecalho_bx">
+        <a href="https://www.instagram.com/pieroni.vinicius?r=nametag"><img class="logo" src="imagens/instagram-logo.png" alt=""> pieroni.vinicius</a>
+        <a href="https://web.whatsapp.com/"><img class="logo" src="imagens/logo-whatsapp.png" alt="">contato:*******4139</a> <br>
+        <a href="https://www.facebook.com/vinicius.pieroni.92"><img class="logo" src="imagens/facebook-logo.jpg" alt="">Vinicius Pieroni</a>
+        <a href="https://gmail.com/"><img class="logo" src="imagens/logo-email.png" alt="">vinizanetini@gmail.com</a>
+    </div> -->
+
 </body>
 
 </html>
+<script>
+    function protagonistas() {
+        antag.style.display = 'none';
+        prota.style.display = 'none';
+        per1.style.display = 'block';
+        per2.style.display = 'block';
+
+    }
+
+    function mais() {
+        img.style.display = 'none';
+        bio.style.display = 'none';
+        mns.style.display = 'block';
+        his.style.display = 'block';
+
+    }
+
+    function menos() {
+        img.style.display = 'block';
+        bio.style.display = 'block';
+        mns.style.display = 'none';
+        his.style.display = 'none';
+
+    }
+
+    function mais1() {
+        img1.style.display = 'none';
+        bio1.style.display = 'none';
+        mns1.style.display = 'block';
+        his1.style.display = 'block';
+
+    }
+
+    function menos1() {
+        img1.style.display = 'block';
+        bio1.style.display = 'block';
+        mns1.style.display = 'none';
+        his1.style.display = 'none';
+
+    }
+</script>
