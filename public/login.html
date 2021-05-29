@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ptbr">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="shortcut icon" href="./imagens/simbolo_umbrella_cabecalho.png" type="image/x-icon">
-    <title>Residente Evil</title>
+    <title>Resident Evil</title>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
 
                 <form id="form_login" method="post" onsubmit="return entrar()">
                     <span class="text">Usuário:</span>
-                    <input type="text" class="inp_login" id="id_login" name="login">
+                    <input type="text" class="inp_login" id="id_email" name="email">
                     <br>
                     <span class="text">Senha:</span>
                     <span class="sn">..</span>
@@ -51,7 +51,7 @@
                     <div id="div_erro" class="msg_erro">
                     </div>
 
-                    <img src="imagens/loader.gif " id="img_aguarde " style="height: 50px; visibility: hidden; ">
+                    <img src="loader.gif" id="img_aguarde " style="height: 50px; visibility: hidden; ">
 
 
                 </div>
@@ -66,7 +66,7 @@
 
 <script>
     function entrar() {
-        aguardar();
+        // aguardar();
         var formulario = new URLSearchParams(new FormData(form_login));
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -78,7 +78,7 @@
                 resposta.json().then(json => {
 
                     sessionStorage.email_usuario_meuapp = json.email;
-                    sessionStorage.nome_usuario_meuapp = json.nome;
+                    sessionStorage.senha_usuario_meuapp = json.senha;
 
                     window.location.href = 'index.html';
                 });
@@ -97,16 +97,16 @@
         return false;
     }
 
-    function aguardar() {
-        btn_entrar.disabled = true;
-        img_aguarde.style.visibility = 'visible';
-        div_erro.style.visibility = 'hidden';
-    }
+    // function aguardar() {
+    //     btn_entrar.disabled = true;
+    //     img_aguarde.style.visibility = 'visible';
+    //     div_erro.style.visibility = 'hidden';
+    // }
 
     function finalizar_aguardar(resposta) {
         btn_entrar.disabled = false;
-        img_aguarde.style.visibility = 'hidden';
-        div_erro.style.visibility = 'visible';
+        // img_aguarde.style.visibility = 'hidden';
+        // div_erro.style.visibility = 'visible';
         div_erro.innerHTML = resposta;
     }
 </script>
