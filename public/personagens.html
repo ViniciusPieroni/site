@@ -11,64 +11,248 @@
 </head>
 
 <body>
-    <div class="cabecalho">
-        <div class="caixa">
-            <span>
+    <div id="bom">
+        <div class="cabecalho">
+            <div class="caixa">
+                <span>
             <img src="./imagens/simbolo_umbrella_cabecalho.png" alt=""><br> <i class="re">Resident Evil</i> 
           </span>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="index.html"></a> HOME</li>
-                    <li><a href="login.html"> LOGIN</a></li>
-                    <li class="per">
-                        <a href="personagens.html"></a> PERSONAGENS</li>
-                    <li>SOBRE </li>
-                    <li>RUNS</li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html"></a> HOME</li>
+                        <li><a href="login.html"> LOGIN</a></li>
+                        <li class="per">
+                            <a href="personagens.html"></a> PERSONAGENS</li>
+                        <li>SOBRE </li>
+                        <li>RUNS</li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
-    <div class="caixa">
-        <button id="prota" class="pro" onclick="protagonistas()"><h1>Ver <br> Protagonistas</h1></button>
-        <button id="antag" class="ant" onclick="antagonistas()"><h1>Ver <br> Antagonistas</h1></button>
-    </div>
-    <!-- chris_redfield começo -->
-    <span class="caixa1" id="per1" style="display: none;">
+        <div class="caixa">
+            <button id="prota" class="pro" onclick="protagonistas()"><h1>Ver <br> Protagonistas</h1></button>
+            <button id="antag" class="ant" onclick="antagonistas()"><h1>Ver <br> Antagonistas</h1></button>
+
+            <!-- chris_redfield começo -->
+            <span class="caixa1" id="per1" style="display: none;">
         <img class="img" src="imagens/chris_redfield.jpg" id="img" alt=""><br>
         <span id="bio">
         <span class="info" >
             Nome: Chris Redfield  </span><br><br><span class="info"> Data de Nascimento: 1973</span> <br><br><span class="info"> Gênero: Masculino</span><br> <br> <span class="info">Altura: 1,85m</span><button class="mais" onclick="mais()">+</button><br><br>
-    <span class="info"> Peso: 98 kg </span><br><br>
-    <span class="info">R/N: Caucasiano/Americano</span><br> <br><span class="info"> Ocupação Atual: Capitão do</span><br><span class="info"> Esquadrão Lobo de Caça</span>
-    </span>
-    <button class="menos" id="mns" style="display: none;" onclick="menos()">-</button>
-    <span id='his' style="display: none;">Não se sabe muito sobre a infância de Redfield, além de que ele e Claire Redfield foram criados em Nova Iorque após terem perdido os pais em algum momento antes de 1998, tendo apenas um ao outro como família. Ao alcançar a maior idade, Redfield ingressou na Força Aérea dos Estados Unidos, onde recebeu treinamento para pilotar aviões e helicópteros, além de treinar para usar uma ampla variedade de armas, incluindo facas, ficando principalmente conhecido por seu combate corpo-a-corpo e pontaria pelas quais chegou a ganhar um concurso. Durante esse período, ele serviu em uma unidade ao lado de Barry Burton, que se tornou seu amigo íntimo e mentor. No geral, embora seu caráter direto fosse adequado para um piloto e ele se mostrasse muito promissor na aeronáutica, Redfield mantinha fortes convicções que o colocavam em desacordo com seus oficiais seniores, culminando com ele sendo dispensado do exército em 1995, embora seja incerto se a dispensa ocorrera por sua renuncia ou por insubordinação</span>
-    </span>
-    <!-- chris_redfield final -->
-    <!-- jill_valentine -->
-    <span class="caixa2" id="per2" style="display: none;">
+            <span class="info"> Peso: 98 kg </span><br><br>
+            <span class="info">R/N: Caucasiano/Americano</span><br> <br><span class="info"> Ocupação Atual: Capitão do</span><br><span class="info"> Esquadrão Lobo de Caça</span>
+            </span>
+            <button class="menos" id="mns" style="display: none;" onclick="menos()">-</button>
+            <span id='his' style="display: none;">Não se sabe muito sobre a infância de Redfield, além de que ele e Claire Redfield foram criados em Nova Iorque após terem perdido os pais em algum momento antes de 1998, tendo apenas um ao outro como família. Ao alcançar a maior idade, Redfield ingressou na Força Aérea dos Estados Unidos, onde recebeu treinamento para pilotar aviões e helicópteros, além de treinar para usar uma ampla variedade de armas, incluindo facas, ficando principalmente conhecido por seu combate corpo-a-corpo e pontaria pelas quais chegou a ganhar um concurso. Durante esse período, ele serviu em uma unidade ao lado de Barry Burton, que se tornou seu amigo íntimo e mentor. No geral, embora seu caráter direto fosse adequado para um piloto e ele se mostrasse muito promissor na aeronáutica, Redfield mantinha fortes convicções que o colocavam em desacordo com seus oficiais seniores, culminando com ele sendo dispensado do exército em 1995, embora seja incerto se a dispensa ocorrera por sua renuncia ou por insubordinação</span>
+            </span>
+            <!-- chris_redfield final -->
+            <!-- jill_valentine -->
+            <span class="caixa2" id="per2" style="display: none;">
         <img class="img1" src="imagens/jill_valentine.jpg" id="img1" alt=""><br>
         <span id="bio1">
     <span class="info" >
         Nome: Jill Valentine  </span><br><br><span class="info"> Data de Nascimento: 1974</span> <br><br><span class="info"> Gênero: Feminino</span><br> <br> <span class="info">Altura: 1,65m</span><button class="mais1" onclick="mais1()">+</button><br><br>
-    <span class="info"> Peso: 56 kg </span><br><br>
-    <span class="info">R/N: 
+            <span class="info"> Peso: 56 kg </span><br><br>
+            <span class="info">R/N: 
         Caucasiana/Americana (ascendência mista franco-japonesa)</span><br> <br><span class="info"> Ocupação Atual: S.O.A. da B.S.A.A.</span>
-    <button class="menos1" id="mns1" style="display: none;" onclick="menos1()">-</button>
-    <span id='his1' style="display: none;">Não se sabe muito sobre a infância de Redfield, além de que ele e Claire Redfield foram criados em Nova Iorque após terem perdido os pais em algum momento antes de 1998, tendo apenas um ao outro como família. Ao alcançar a maior idade, Redfield ingressou na Força Aérea dos Estados Unidos, onde recebeu treinamento para pilotar aviões e helicópteros, além de treinar para usar uma ampla variedade de armas, incluindo facas, ficando principalmente conhecido por seu combate corpo-a-corpo e pontaria pelas quais chegou a ganhar um concurso. Durante esse período, ele serviu em uma unidade ao lado de Barry Burton, que se tornou seu amigo íntimo e mentor. No geral, embora seu caráter direto fosse adequado para um piloto e ele se mostrasse muito promissor na aeronáutica, Redfield mantinha fortes convicções que o colocavam em desacordo com seus oficiais seniores, culminando com ele sendo dispensado do exército em 1995, embora seja incerto se a dispensa ocorrera por sua renuncia ou por insubordinação</span>
+            </span>
+            <button class="menos" id="mns1" style="display: none;" onclick="menos1()">-</button>
+            <span id='his1' style="display: none;">
+        Quase nada se sabe da vida pregressa de Valentine, além de que o pai dela era francês enquanto sua mãe era de descendência japonesa (uma "nikkei") e que ela fora muito rebelde em sua adolescência.
+        No início da década de 90, Valentine serviu no exército dos Estados Unidos e chamou a atenção de recrutadores do 1º SFOD-D (1º Destacamento Operacional de Forças Especiais), conhecido como "Força Delta", a principal unidade antiterrorismo do país. Apesar de seu sexo, Valentine foi autorizada a participar do Curso de Treinamento Intensivo para Operador de seis meses, onde se destacou no descarte de bombas e no destrancamento de fechaduras, além de também ser reconhecida por seu trabalho delicado, porém preciso, resiliência, coragem e discernimento em meio ao perigo. Essa experiência fez de Valentine uma das únicas mulheres no mundo com treinamento da Força Delta.
     </span>
-    <!-- jill_valentine final -->
+            </span>
+            <!-- jill_valentine final -->
+            <!-- Barry_burton começo -->
+            <span class="caixa3" id="per3" style="display: none;">
+        <img class="img2" src="imagens/Barry_burton.jpg" id="img2" alt=""><br>
+        <span id="bio2">
+    <span class="info" > Nome: Barry Burton  </span><br><br><span class="info"> Data de Nascimento: 1960</span> <br><br><span class="info"> Gênero: Masculino</span><br> <br> <span class="info">Altura: 1,86m</span><button class="mais2" onclick="mais2()">+</button><br><br>
+            <span class="info"> Peso: 89,3 kg </span><br><br>
+            <span class="info">R/N: Caucasiano/Americano</span><br> <br><span class="info"> Consultor/Especialista em Combate da B.S.A.A</span>
+            <span id='his2' style="display: none;">A carreira de Burton começou em 1983, quando ingressou na Força Aérea dos Estados Unidos, onde aprendeu a pilotar helicópteros e aeronaves. Neste período, ele serviu na mesma unidade que Chris Redfield, com ambos se tornando grandes amigos. Ao então completar seu serviço, Burton se juntou à equipe da S.W.A.T. de um determinado departamento de polícia, onde seu mentor na aplicação da lei fora Enrico Marini, que, por sua vez, virou um bom confidente seu. Durante essa época, ele se tornou especialista em armamentos, adquirindo um gosto tão grande pela área que o levou a se tornar um colecionador de armas de fogo e associar-se a N.R.A. (Associação Nacional de Rifles). Posteriormente, em meados da década de 1990, ele e sua amada esposa, Kathy, tiveram duas filhas chamadas Moira e Polly.</span>
+            <button class="menos2" id="mns2" style="display: none;" onclick="menos2()">-</button>
+            </span>
+            </span>
+            <!-- barry_burton final -->
+            <br>
+            <!-- Leon S. Kennedy começo -->
+            <span class="caixa4" id="per4" style="display: none;">
+            <img class="img3" src="imagens/leon-s-kennedy.jpeg" id="img3" alt=""><br>
+            <span id="bio3">
+        <span class="info" >
+            Nome: Leon S. Kennedy  </span><br><br><span class="info"> Data de Nascimento: 1977</span> <br><br><span class="info"> Gênero: Masculino</span><br> <br> <span class="info">Altura: 1,80m</span><button class="mais1" onclick="mais3()">+</button><br><br>
+            <span class="info"> Peso: 80 kg </span><br><br>
+            <span class="info">R/N: 
+            Caucasiana/Americano </span><br> <br><span class="info"> Ocupação Atual:Agente-Maior e Co-fundador da D.S.O </span>
+            </span>
+            <button class="menos3" id="mns3" style="display: none;" onclick="menos3()">-</button>
+            <span id='his3' style="display: none;">
+            Leon Scott Kennedy é um agente americano pela D.S.O, divisão essa que ajudou a criar ao lado do Presidente dos Estados Unidos, tendo um cargo de muita confiança e respeito das altas autoridades dos Estados Unidos, tendo sido amigo do falecido Presidente Adam Benford. Antes disso, Leon serviu como policial pelo Departamento de Policia de Raccoon City(R.P.D) por apenas um dia. Ele se interessou em entrar para a policia depois de saber sobre os estranhos eventos que aconteceu em Arklay Mountains, no ano de 1996. Depois do Incidente de Raccoon City, ele recebeu uma oferta tentadora e foi instruído a prestar serviços para o governo dos Estados Unidos pela US-STRATCOM até 2011. </span>
+            </span>
+            <!-- Clarie Redfield -->
+            <span class="caixa5" id="per5" style="display: none;">
+            <img class="img4" src="imagens/claire_redfield.jpg" id="img4" alt=""><br>
+            <span id="bio4">
+        <span class="info" >
+            Nome: Clarie Redfield  </span><br><br><span class="info"> Data de Nascimento: 1979</span> <br><br><span class="info"> Gênero: Feminino</span><br> <br> <span class="info">Altura: 1,69m</span><button class="mais1" onclick="mais4()">+</button><br><br>
+            <span class="info"> Peso: 52,4 kg </span><br><br>
+            <span class="info">R/N: 
+            Caucasiana/Americana </span><br> <br><span class="info"> Ocupação Atual:Membro da TerraSave (2005 - Atualmente)</span>
+            </span>
+            <button class="menos" id="mns4" style="display: none;" onclick="menos4()">-</button>
+            <span id='his4' style="display: none;">
+            Claire Redfield faz parte de uma organização de direitos humanos chamada TerraSave desde 2005, e a irmã mais nova de Chris Redfield e tem muito orgulho do trabalho do irmão, desde a época dos S.T.A.R.S. Ela tem personalidade forte e mesmo sendo somente uma civil, ela sabe manejar armas e lockpicks muito bem, graças às lições que aprendeu com o irmão mais velho. Claire levava uma vida perfeitamente normal, sendo uma estudante apaixonada por motocicletas, até o repentino desaparecimento de Chris. Ela decidiu ir até Raccoon City  tentar descobrir o paradeiro de seu irmão e se envolveu na trágica história da cidade junto de Leon S. Kennedy. A partir daí, Claire se viu comovida com as vítimas da pesquisa ilegal e do bioterrorismo e se tornou uma ativista para combater esse tipo de atividade.</span>
+            </span>
+            <!-- Rose -->
+            <span class="caixa6" id="per6" style="display: none;">
+            <img class="img5" src="imagens/rose_winters.png" id="img5" alt=""><br>
+            <span id="bio5">
+        <span class="info" >
+            Nome: Rosemary Winters  </span><br><br><span class="info"> Data de Nascimento: 2 de agosto de 2020</span> <br><br><span class="info"> Gênero: Feminino</span><br> <br> <span class="info">Altura:?</span><button class="mais1" onclick="mais5()">+</button><br><br>
+            <span class="info"> Peso: 52,4 kg </span><br><br>
+            <span class="info">R/N: 
+            
+Caucasiano Europeu</span><br> <br><span class="info"> Ocupação Atual:?</span>
+            </span>
+            <button class="menos" id="mns5" style="display: none;" onclick="menos5()">-</button>
+            <span id='his5' style="display: none;">
+            Rosemary nasceu em agosto de 2020, enquanto seus pais estavam sob proteção da BSAA. Devido às mutações da família, bem como aos antigos laços de Mia com As Conexões, eles estavam em sério risco de sequestro para experimentos ou até assassinato. Embora haja evidências sugerindo que eles foram movidos repetidamente, até 2021 eles estavam vivendo no leste europeu. Neste ponto, a existência de Rosemary foi vazada por meios não especificados, seja através da BSAA ou das Conexões. Quando Miranda, uma sacerdotisa de uma aldeia próxima, obteve essa informação, ela sequestrou Mia e assimilou seu DNA para assumir sua aparência. Quando essa assimilação ocorreu é incerto, embora a BSAA tenha obtido provas da trama até segunda-feira, 8 de fevereiro. Embora o ataque tenha sido inicialmente um sucesso, Miranda forjou sua morte e foi capaz de roubar Rosemary enquanto os dois estavam sendo transportados.</span>
+            </span>
+            <button style="display: none;" id="vol" onclick="voltar()">voltar</button>
+
+        </div>
 
 
+        <div class="cabecalho_bx">
+            <a href="https://www.instagram.com/pieroni.vinicius?r=nametag"><img class="logo" src="imagens/instagram-logo.png" alt=""> pieroni.vinicius</a>
+            <a href="https://web.whatsapp.com/"><img class="logo" src="imagens/logo-whatsapp.png" alt="">contato:*******4139</a> <br>
+            <a href="https://www.facebook.com/vinicius.pieroni.92"><img class="logo" src="imagens/facebook-logo.jpg" alt="">Vinicius Pieroni</a>
+            <a href="https://gmail.com/"><img class="logo" src="imagens/logo-email.png" alt="">vinizanetini@gmail.com</a>
+        </div>
+    </div>
+    <div id="mau" style="display: none;">
+        <div class="cabecalho_mau">
+            <div class="caixa_mau">
+                <span>
+            <img src="./imagens/simbolo_umbrella_cabecalho.png" alt=""><br> <i class="re">Resident Evil</i> 
+          </span>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html"></a> HOME</li>
+                        <li><a href="login.html"> LOGIN</a></li>
+                        <li class="per">
+                            <a href="personagens.html"></a> PERSONAGENS</li>
+                        <li>SOBRE </li>
+                        <li>RUNS</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="caixa_mau">
+            <button id="prota_mau" class="pro" onclick="protagonistas()"><h1>Ver <br> Protagonistas</h1></button>
+            <button id="antag_mau" class="ant" onclick="antagonistas()"><h1>Ver <br> Antagonistas</h1></button>
 
-    <!-- <div class="cabecalho_bx">
-        <a href="https://www.instagram.com/pieroni.vinicius?r=nametag"><img class="logo" src="imagens/instagram-logo.png" alt=""> pieroni.vinicius</a>
-        <a href="https://web.whatsapp.com/"><img class="logo" src="imagens/logo-whatsapp.png" alt="">contato:*******4139</a> <br>
-        <a href="https://www.facebook.com/vinicius.pieroni.92"><img class="logo" src="imagens/facebook-logo.jpg" alt="">Vinicius Pieroni</a>
-        <a href="https://gmail.com/"><img class="logo" src="imagens/logo-email.png" alt="">vinizanetini@gmail.com</a>
-    </div> -->
+            <!-- chris_redfield começo -->
+            <span class="caixa7" id="per7" style="display: none;">
+        <img class="img6" src="imagens/chris_redfield.jpg" id="img6" alt=""><br>
+        <span id="bio6">
+        <span class="info" >
+            Nome: Chris Redfield  </span><br><br><span class="info"> Data de Nascimento: 1973</span> <br><br><span class="info"> Gênero: Masculino</span><br> <br> <span class="info">Altura: 1,85m</span><button class="mais6" onclick="mais6()">+</button><br><br>
+            <span class="info"> Peso: 98 kg </span><br><br>
+            <span class="info">R/N: Caucasiano/Americano</span><br> <br><span class="info"> Ocupação Atual: Capitão do</span><br><span class="info"> Esquadrão Lobo de Caça</span>
+            </span>
+            <button class="menos6" id="mns6" style="display: none;" onclick="menos6()">-</button>
+            <span id='his6' style="display: none;">Não se sabe muito sobre a infância de Redfield, além de que ele e Claire Redfield foram criados em Nova Iorque após terem perdido os pais em algum momento antes de 1998, tendo apenas um ao outro como família. Ao alcançar a maior idade, Redfield ingressou na Força Aérea dos Estados Unidos, onde recebeu treinamento para pilotar aviões e helicópteros, além de treinar para usar uma ampla variedade de armas, incluindo facas, ficando principalmente conhecido por seu combate corpo-a-corpo e pontaria pelas quais chegou a ganhar um concurso. Durante esse período, ele serviu em uma unidade ao lado de Barry Burton, que se tornou seu amigo íntimo e mentor. No geral, embora seu caráter direto fosse adequado para um piloto e ele se mostrasse muito promissor na aeronáutica, Redfield mantinha fortes convicções que o colocavam em desacordo com seus oficiais seniores, culminando com ele sendo dispensado do exército em 1995, embora seja incerto se a dispensa ocorrera por sua renuncia ou por insubordinação</span>
+            </span>
+            <!-- chris_redfield final -->
+            <!-- jill_valentine -->
+            <span class="caixa8" id="per8" style="display: none;">
+        <img class="img7" src="imagens/jill_valentine.jpg" id="img7" alt=""><br>
+        <span id="bio7">
+    <span class="info" >
+        Nome: Jill Valentine  </span><br><br><span class="info"> Data de Nascimento: 1974</span> <br><br><span class="info"> Gênero: Feminino</span><br> <br> <span class="info">Altura: 1,65m</span><button class="mais7" onclick="mais7()">+</button><br><br>
+            <span class="info"> Peso: 56 kg </span><br><br>
+            <span class="info">R/N: 
+        Caucasiana/Americana (ascendência mista franco-japonesa)</span><br> <br><span class="info"> Ocupação Atual: S.O.A. da B.S.A.A.</span>
+            </span>
+            <button class="menos" id="mns7" style="display: none;" onclick="menos7()">-</button>
+            <span id='his7' style="display: none;">
+        Quase nada se sabe da vida pregressa de Valentine, além de que o pai dela era francês enquanto sua mãe era de descendência japonesa (uma "nikkei") e que ela fora muito rebelde em sua adolescência.
+        No início da década de 90, Valentine serviu no exército dos Estados Unidos e chamou a atenção de recrutadores do 1º SFOD-D (1º Destacamento Operacional de Forças Especiais), conhecido como "Força Delta", a principal unidade antiterrorismo do país. Apesar de seu sexo, Valentine foi autorizada a participar do Curso de Treinamento Intensivo para Operador de seis meses, onde se destacou no descarte de bombas e no destrancamento de fechaduras, além de também ser reconhecida por seu trabalho delicado, porém preciso, resiliência, coragem e discernimento em meio ao perigo. Essa experiência fez de Valentine uma das únicas mulheres no mundo com treinamento da Força Delta.
+    </span>
+            </span>
+            <!-- jill_valentine final -->
+            <!-- Barry_burton começo -->
+            <span class="caixa9" id="per9" style="display: none;">
+        <img class="img8" src="imagens/Barry_burton.jpg" id="img8" alt=""><br>
+        <span id="bio8">
+    <span class="info" > Nome: Barry Burton  </span><br><br><span class="info"> Data de Nascimento: 1960</span> <br><br><span class="info"> Gênero: Masculino</span><br> <br> <span class="info">Altura: 1,86m</span><button class="mais8" onclick="mais8()">+</button><br><br>
+            <span class="info"> Peso: 89,3 kg </span><br><br>
+            <span class="info">R/N: Caucasiano/Americano</span><br> <br><span class="info"> Consultor/Especialista em Combate da B.S.A.A</span>
+            <span id='his8' style="display: none;">A carreira de Burton começou em 1983, quando ingressou na Força Aérea dos Estados Unidos, onde aprendeu a pilotar helicópteros e aeronaves. Neste período, ele serviu na mesma unidade que Chris Redfield, com ambos se tornando grandes amigos. Ao então completar seu serviço, Burton se juntou à equipe da S.W.A.T. de um determinado departamento de polícia, onde seu mentor na aplicação da lei fora Enrico Marini, que, por sua vez, virou um bom confidente seu. Durante essa época, ele se tornou especialista em armamentos, adquirindo um gosto tão grande pela área que o levou a se tornar um colecionador de armas de fogo e associar-se a N.R.A. (Associação Nacional de Rifles). Posteriormente, em meados da década de 1990, ele e sua amada esposa, Kathy, tiveram duas filhas chamadas Moira e Polly.</span>
+            <button class="menos8" id="mns8" style="display: none;" onclick="menos8()">-</button>
+            </span>
+            </span>
+            <!-- barry_burton final -->
+            <br>
+            <!-- Leon S. Kennedy começo -->
+            <span class="caixa10" id="per10" style="display: none;">
+            <img class="img9" src="imagens/leon-s-kennedy.jpeg" id="img9" alt=""><br>
+            <span id="bio9">
+        <span class="info" >
+            Nome: Leon S. Kennedy  </span><br><br><span class="info"> Data de Nascimento: 1977</span> <br><br><span class="info"> Gênero: Masculino</span><br> <br> <span class="info">Altura: 1,80m</span><button class="mais9" onclick="mais9()">+</button><br><br>
+            <span class="info"> Peso: 80 kg </span><br><br>
+            <span class="info">R/N: 
+            Caucasiana/Americano </span><br> <br><span class="info"> Ocupação Atual:Agente-Maior e Co-fundador da D.S.O </span>
+            </span>
+            <button class="menos9" id="mns9" style="display: none;" onclick="menos9()">-</button>
+            <span id='his9' style="display: none;">
+            Leon Scott Kennedy é um agente americano pela D.S.O, divisão essa que ajudou a criar ao lado do Presidente dos Estados Unidos, tendo um cargo de muita confiança e respeito das altas autoridades dos Estados Unidos, tendo sido amigo do falecido Presidente Adam Benford. Antes disso, Leon serviu como policial pelo Departamento de Policia de Raccoon City(R.P.D) por apenas um dia. Ele se interessou em entrar para a policia depois de saber sobre os estranhos eventos que aconteceu em Arklay Mountains, no ano de 1996. Depois do Incidente de Raccoon City, ele recebeu uma oferta tentadora e foi instruído a prestar serviços para o governo dos Estados Unidos pela US-STRATCOM até 2011. </span>
+            </span>
+            <!-- Clarie Redfield -->
+            <span class="caixa11" id="per11" style="display: none;">
+            <img class="img10" src="imagens/claire_redfield.jpg" id="img10" alt=""><br>
+            <span id="bio10">
+        <span class="info" >
+            Nome: Clarie Redfield  </span><br><br><span class="info"> Data de Nascimento: 1979</span> <br><br><span class="info"> Gênero: Feminino</span><br> <br> <span class="info">Altura: 1,69m</span><button class="mais10" onclick="mais10()">+</button><br><br>
+            <span class="info"> Peso: 52,4 kg </span><br><br>
+            <span class="info">R/N: 
+            Caucasiana/Americana </span><br> <br><span class="info"> Ocupação Atual:Membro da TerraSave (2005 - Atualmente)</span>
+            </span>
+            <button class="menos" id="mns10" style="display: none;" onclick="menos10()">-</button>
+            <span id='his10' style="display: none;">
+            Claire Redfield faz parte de uma organização de direitos humanos chamada TerraSave desde 2005, e a irmã mais nova de Chris Redfield e tem muito orgulho do trabalho do irmão, desde a época dos S.T.A.R.S. Ela tem personalidade forte e mesmo sendo somente uma civil, ela sabe manejar armas e lockpicks muito bem, graças às lições que aprendeu com o irmão mais velho. Claire levava uma vida perfeitamente normal, sendo uma estudante apaixonada por motocicletas, até o repentino desaparecimento de Chris. Ela decidiu ir até Raccoon City  tentar descobrir o paradeiro de seu irmão e se envolveu na trágica história da cidade junto de Leon S. Kennedy. A partir daí, Claire se viu comovida com as vítimas da pesquisa ilegal e do bioterrorismo e se tornou uma ativista para combater esse tipo de atividade.</span>
+            </span>
+            <!-- Rose -->
+            <span class="caixa12" id="per12" style="display: none;">
+            <img class="img11" src="imagens/rose_winters.png" id="img11" alt=""><br>
+            <span id="bio11">
+        <span class="info" >
+            Nome: Rosemary Winters  </span><br><br><span class="info"> Data de Nascimento: 2 de agosto de 2020</span> <br><br><span class="info"> Gênero: Feminino</span><br> <br> <span class="info">Altura:?</span><button class="mais11" onclick="mais11()">+</button><br><br>
+            <span class="info"> Peso: 52,4 kg </span><br><br>
+            <span class="info">R/N: 
+            
+Caucasiano Europeu</span><br> <br><span class="info"> Ocupação Atual:?</span>
+            </span>
+            <button class="menos11" id="mns11" style="display: none;" onclick="menos11()">-</button>
+            <span id='his11' style="display: none;">
+            Rosemary nasceu em agosto de 2020, enquanto seus pais estavam sob proteção da BSAA. Devido às mutações da família, bem como aos antigos laços de Mia com As Conexões, eles estavam em sério risco de sequestro para experimentos ou até assassinato. Embora haja evidências sugerindo que eles foram movidos repetidamente, até 2021 eles estavam vivendo no leste europeu. Neste ponto, a existência de Rosemary foi vazada por meios não especificados, seja através da BSAA ou das Conexões. Quando Miranda, uma sacerdotisa de uma aldeia próxima, obteve essa informação, ela sequestrou Mia e assimilou seu DNA para assumir sua aparência. Quando essa assimilação ocorreu é incerto, embora a BSAA tenha obtido provas da trama até segunda-feira, 8 de fevereiro. Embora o ataque tenha sido inicialmente um sucesso, Miranda forjou sua morte e foi capaz de roubar Rosemary enquanto os dois estavam sendo transportados.</span>
+            </span>
+            <button style="display: none;" id="vol_mau" onclick="voltar()">voltar</button>
 
+        </div>
+
+
+        <div class="cabecalho_bx_mau">
+            <a href="https://www.instagram.com/pieroni.vinicius?r=nametag"><img class="logo" src="imagens/instagram-logo.png" alt=""> pieroni.vinicius</a>
+            <a href="https://web.whatsapp.com/"><img class="logo" src="imagens/logo-whatsapp.png" alt="">contato:*******4139</a> <br>
+            <a href="https://www.facebook.com/vinicius.pieroni.92"><img class="logo" src="imagens/facebook-logo.jpg" alt="">Vinicius Pieroni</a>
+            <a href="https://gmail.com/"><img class="logo" src="imagens/logo-email.png" alt="">vinizanetini@gmail.com</a>
+        </div>
+    </div>
 </body>
 
 </html>
@@ -78,8 +262,15 @@
         prota.style.display = 'none';
         per1.style.display = 'block';
         per2.style.display = 'block';
+        per3.style.display = 'block';
+        per4.style.display = 'block';
+        per5.style.display = 'block';
+        per6.style.display = 'block';
+        vol.style.display = 'block'
 
     }
+
+
 
     function mais() {
         img.style.display = 'none';
@@ -110,6 +301,205 @@
         bio1.style.display = 'block';
         mns1.style.display = 'none';
         his1.style.display = 'none';
+    }
 
+    function mais2() {
+        img2.style.display = 'none';
+        bio2.style.display = 'none';
+        mns2.style.display = 'block';
+        his2.style.display = 'block';
+
+    }
+
+    function menos2() {
+        img2.style.display = 'block';
+        bio2.style.display = 'block';
+        mns2.style.display = 'none';
+        his2.style.display = 'none';
+
+
+    }
+
+    function voltar() {
+        antag.style.display = 'block';
+        prota.style.display = 'block';
+        per1.style.display = 'none';
+        per2.style.display = 'none';
+        per3.style.display = 'none';
+        per4.style.display = 'none';
+        per5.style.display = 'none';
+        per6.style.display = 'none';
+        vol.style.display = 'none';
+
+    }
+
+    function mais3() {
+        img3.style.display = 'none';
+        bio3.style.display = 'none';
+        mns3.style.display = 'block';
+        his3.style.display = 'block';
+
+    }
+
+    function menos3() {
+        img3.style.display = 'block';
+        bio3.style.display = 'block';
+        mns3.style.display = 'none';
+        his3.style.display = 'none';
+
+    }
+
+    function mais4() {
+        img4.style.display = 'none';
+        bio4.style.display = 'none';
+        mns4.style.display = 'block';
+        his4.style.display = 'block';
+
+    }
+
+    function menos4() {
+        img4.style.display = 'block';
+        bio4.style.display = 'block';
+        mns4.style.display = 'none';
+        his4.style.display = 'none';
+    }
+
+    function mais5() {
+        img5.style.display = 'none';
+        bio5.style.display = 'none';
+        mns5.style.display = 'block';
+        his5.style.display = 'block';
+
+    }
+
+    function menos5() {
+        img5.style.display = 'block';
+        bio5.style.display = 'block';
+        mns5.style.display = 'none';
+        his5.style.display = 'none';
+    }
+</script>
+<script>
+    function antagonistas() {
+        bom.style.display = 'none';
+        mau.style.display = 'block'
+        antag.style.display = 'none';
+        prota.style.display = 'none';
+        antag_mau.style.display = 'none';
+        prota_mau.style.display = 'none';
+        per7.style.display = 'block';
+        per8.style.display = 'block';
+        per9.style.display = 'block';
+        per10.style.display = 'block';
+        per11.style.display = 'block';
+        per12.style.display = 'block';
+        vol_mau.style.display = 'block';
+    }
+
+    function mais6() {
+        img6.style.display = 'none';
+        bio6.style.display = 'none';
+        mns6.style.display = 'block';
+        his6.style.display = 'block';
+
+    }
+
+    function menos6() {
+        img6.style.display = 'block';
+        bio6.style.display = 'block';
+        mns6.style.display = 'none';
+        his6.style.display = 'none';
+
+    }
+
+    function mais7() {
+        img7.style.display = 'none';
+        bio7.style.display = 'none';
+        mns7.style.display = 'block';
+        his7.style.display = 'block';
+
+    }
+
+    function menos7() {
+        img7.style.display = 'block';
+        bio7.style.display = 'block';
+        mns7.style.display = 'none';
+        his7.style.display = 'none';
+    }
+
+    function mais8() {
+        img8.style.display = 'none';
+        bio8.style.display = 'none';
+        mns8.style.display = 'block';
+        his8.style.display = 'block';
+
+    }
+
+    function menos8() {
+        img8.style.display = 'block';
+        bio8.style.display = 'block';
+        mns8.style.display = 'none';
+        his8.style.display = 'none';
+
+
+    }
+
+    function voltar() {
+        antag.style.display = 'block';
+        prota.style.display = 'block';
+        per1.style.display = 'none';
+        per2.style.display = 'none';
+        per3.style.display = 'none';
+        per4.style.display = 'none';
+        per5.style.display = 'none';
+        per6.style.display = 'none';
+        vol_mau.style.display = 'none';
+
+    }
+
+    function mais9() {
+        img9.style.display = 'none';
+        bio9.style.display = 'none';
+        mns9.style.display = 'block';
+        his9.style.display = 'block';
+
+    }
+
+    function menos9() {
+        img9.style.display = 'block';
+        bio9.style.display = 'block';
+        mns9.style.display = 'none';
+        his9.style.display = 'none';
+
+    }
+
+    function mais10() {
+        img10.style.display = 'none';
+        bio10.style.display = 'none';
+        mns10.style.display = 'block';
+        his10.style.display = 'block';
+
+    }
+
+    function menos10() {
+        img10.style.display = 'block';
+        bio10.style.display = 'block';
+        mns10.style.display = 'none';
+        his10.style.display = 'none';
+    }
+
+    function mais11() {
+        img11.style.display = 'none';
+        bio11.style.display = 'none';
+        mns11.style.display = 'block';
+        his11.style.display = 'block';
+
+    }
+
+    function menos10() {
+        img11.style.display = 'block';
+        bio11.style.display = 'block';
+        mns11.style.display = 'none';
+        his11.style.display = 'none';
     }
 </script>
