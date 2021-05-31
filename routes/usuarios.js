@@ -37,7 +37,7 @@ let sessoes = [];
 // });
 
 router.post('/autenticar', function(req, res, next) {
-    console.log('Recuperando usuário por login e senha');
+    console.log('Recuperando usuário por email e senha');
 
     var email = req.body.email; // depois de .body, use o nome (name) do campo em seu formulário de login
     var senha = req.body.senha; // depois de .body, use o nome (name) do campo em seu formulário de login	
@@ -55,9 +55,9 @@ router.post('/autenticar', function(req, res, next) {
             console.log('sessoes: ', sessoes);
             res.json(resultado[0]);
         } else if (resultado.length == 0) {
-            res.status(403).send('Email e/ou senha inválido(s)');
+            res.status(403).send('<h1><b>Email e/ou senha inválido(s)</b></h1>');
         } else {
-            res.status(403).send('Mais de um usuário com o mesmo email e senha!');
+            res.status(403).send('<h1><b>Mais de um usuário com o mesmo email e senha!</b></h1>');
         }
 
     }).catch(erro => {
