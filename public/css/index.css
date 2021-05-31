@@ -56,6 +56,9 @@ ul li {
     font-family: Helvetica;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #000;
+    text-transform: uppercase;
+    color: rgb(5, 5, 5);
+    text-decoration: none;
 }
 
 .home {
@@ -170,8 +173,6 @@ a {
     margin-left: 150px;
 }
 
-b {}
-
 .texto3 {
     position: absolute;
     margin-left: 270px;
@@ -236,6 +237,11 @@ b {}
     min-height: 140px;
     margin-top: 30px;
     background-image: url(../imagens/fundo_white.jpg);
+}
+
+.cabecalho_bx a {
+    margin-left: 155px;
+    margin-right: -317px;
 }
 
 .logo {

@@ -3,11 +3,12 @@ body {
     padding: 0;
     border: 0;
     background-image: url(../imagens/fundo_white.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .cabecalho {
     background-image: url(../imagens/fundo_white.jpg);
-    /* background: #f8f8ff; */
     width: 100%;
     height: 80px;
     border-bottom: 5px solid rgb(89, 9, 9);
@@ -71,7 +72,7 @@ a {
 
 .faixa1 {
     background-size: cover;
-    background-image: url("../img/RE7-980x420.jpg");
+    background-image: url("../imagens/capcom.jpg");
     background-repeat: no-repeat;
     min-height: 430px;
     color: white;
@@ -90,9 +91,9 @@ a {
     color: rgb(2, 2, 2);
     position: relative;
     background-position: top;
-    /* border-top: 5px solid rgb(97, 2, 2); */
+    border-top: 5px solid rgb(97, 2, 2);
     background-attachment: fixed;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 10px 10px 5px rgb(55, 54, 54);
     font-size: x-large;
     Font-family: Franklin Gothic, Arial Bold;
 }
@@ -106,53 +107,14 @@ a {
 
 .faixa2 {
     background-size: cover;
-    background-image: url(../imagens/rescue.jpg);
+    background-image: url("../imagens/capcom_2.jpg");
     background-repeat: no-repeat;
-    min-height: 300px;
-    color: rgb(255, 255, 255);
+    min-height: 430px;
+    color: white;
     position: relative;
     background-position: top;
-    /* border-top: 5px solid rgb(97, 2, 2); */
-    background-attachment: fixed;
-    box-shadow: 10px 10px 5px grey;
-}
-
-.LdT {
-    margin-bottom: 0px;
-    margin-top: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    align-content: stretch;
-    flex-wrap: revert;
-    flex-direction: row;
     border-top: 5px solid rgb(97, 2, 2);
-    border-bottom: 5px solid rgb(97, 2, 2);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../imagens/fundo_white.jpg);
-}
-
-.img_hover {
-    transition: 0.5s;
-    height: 366px;
-}
-
-.img_hover:hover {
-    margin-top: -30%;
-}
-
-.faixa3 {
-    background-size: cover;
-    background-image: url(../imagens/historia_re0_2.jpg);
-    background-repeat: no-repeat;
-    min-height: 300px;
-    color: rgb(255, 255, 255);
-    position: relative;
-    background-position: top;
-    /* border-top: 5px solid rgb(97, 2, 2); */
     background-attachment: fixed;
-    box-shadow: 10px 10px 5px grey;
 }
 
 .caixa2 {
@@ -160,64 +122,19 @@ a {
     background-size: cover;
     /* background-color: #111111; */
     background-repeat: no-repeat;
-    min-height: 492px;
+    min-height: 616px;
     color: rgb(2, 2, 2);
     position: relative;
     background-position: top;
-    /* border-top: 5px solid rgb(97, 2, 2); */
+    border-top: 5px solid rgb(97, 2, 2);
     background-attachment: fixed;
     box-shadow: 10px 10px 5px grey;
     font-size: x-large;
     Font-family: Franklin Gothic, Arial Bold;
 }
 
-.caixa3 {
-    background-image: url(../imagens/fundo_white.jpg);
-    background-size: cover;
-    /* background-color: #111111; */
-    background-repeat: no-repeat;
-    min-height: 492px;
-    color: rgb(2, 2, 2);
-    position: relative;
-    background-position: top;
-    /* border-top: 5px solid rgb(97, 2, 2); */
-    background-attachment: fixed;
-    box-shadow: 10px 10px 5px grey;
-    font-size: x-large;
-    Font-family: Franklin Gothic, Arial Bold;
-}
-
-.faixa4 {
-    background-image: url(../imagens/historia_re0.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 300px;
-    color: rgb(255, 255, 255);
-    position: relative;
-    background-position: top;
-    /* border-top: 5px solid rgb(97, 2, 2); */
-    background-attachment: fixed;
-    box-shadow: 10px 10px 5px grey;
-}
-
-.cabecalho_bx {
-    width: 100%;
-    height: 80px;
-    border-top: 8px solid rgb(89, 9, 9);
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 140px;
-    margin-top: 30px;
-    background-image: url(../imagens/fundo_white.jpg);
-}
-
-.cabecalho_bx a {
-    margin-left: 155px;
-    margin-right: -317px;
-}
-
-.logo {
-    height: 50px;
-    padding-left: 290px;
-    padding-right: - 290px;
+.home {
+    text-transform: uppercase;
+    color: rgb(89, 9, 9);
+    text-decoration: none;
 }

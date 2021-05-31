@@ -59,6 +59,12 @@ ul li {
     -webkit-text-stroke-color: #000;
 }
 
+.home {
+    text-transform: uppercase;
+    color: rgb(82, 2, 2);
+    text-decoration: none;
+}
+
 a {
     text-transform: uppercase;
     color: rgb(5, 5, 5);
@@ -84,4 +90,26 @@ a {
 
 .btn-green {
     margin-bottom: 5px;
+}
+
+.cabecalho_bx {
+    width: 100%;
+    height: 80px;
+    border-top: 8px solid rgb(89, 9, 9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 140px;
+    margin-top: 30px;
+    background-image: url(../imagens/fundo_white.jpg);
+}
+
+.cabecalho_bx a {
+    margin-left: 155px;
+    margin-right: -317px;
+}
+
+.logo {
+    height: 50px;
+    padding-left: 290px;
+    padding-right: - 290px;
 }

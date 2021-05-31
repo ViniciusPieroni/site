@@ -2,7 +2,7 @@
         margin: 0;
         padding: 0;
         border: 0;
-        background-image: url(../imagens/umbrella-chronicles.jpg);
+        background-image: url(../imagens/fundo_pagina_c-l.jpg);
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -81,6 +81,11 @@
         background-image: url(../imagens/fundo_white.jpg);
     }
     
+    .cabecalho_bx a {
+        margin-left: 155px;
+        margin-right: -317px;
+    }
+    
     .logo {
         height: 50px;
         padding-left: 290px;
@@ -93,9 +98,14 @@
         text-align: center;
         border-radius: 3%;
         box-shadow: 5px 5px 2.5px gray;
-        margin-top: 216px;
-        margin-left: 144px;
+        margin-top: 53px;
+        margin-left: -65px;
         position: absolute;
+    }
+    
+    .grafico {
+        height: 100px;
+        margin-top: 50px;
     }
     
     .ant {
@@ -104,9 +114,9 @@
         text-align: center;
         border-radius: 3%;
         box-shadow: 5px 5px 2.5px grey;
+        margin-top: 53px;
+        margin-left: 567px;
         position: absolute;
-        margin-top: 220px;
-        margin-left: 417px;
     }
     
     .caixa1 {
@@ -374,6 +384,12 @@
         background-image: url(../imagens/fundo_black.jpg);
     }
     
+    .cabecalho_bx_mau a {
+        margin-left: 155px;
+        margin-right: -317px;
+        color: white;
+    }
+    
     .logo {
         height: 50px;
         padding-left: 290px;
@@ -396,7 +412,7 @@
         height: 200px;
         border: 5px solid rgba(10, 10, 10, 0.898);
         margin-top: 10px;
-        margin-left: 17%;
+        margin-left: 10%;
     }
     
     .mais6 {
@@ -427,7 +443,7 @@
         height: 200px;
         border: 5px solid rgba(43, 7, 5, 0.823);
         margin-top: 10px;
-        margin-left: 17%;
+        margin-left: 12%;
     }
     
     .mais7 {
@@ -458,7 +474,7 @@
         height: 200px;
         border: 5px solid rgba(10, 10, 10, 0.898);
         margin-top: 10px;
-        margin-left: 17%;
+        margin-left: 12%;
     }
     
     .mais8 {
@@ -551,7 +567,7 @@
         height: 200px;
         border: 5px solid rgba(10, 10, 10, 0.898);
         margin-top: 10px;
-        margin-left: 17%;
+        margin-left: 14%;
     }
     
     .mais11 {
