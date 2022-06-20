@@ -1,0 +1,1838 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+:root {
+	--poppins: 'Poppins', sans-serif;
+	--lato: 'Lato', sans-serif;
+
+	--light: #F9F9F9;
+	--primary: #A4161A;
+	--light-blue: #CFE8FF;
+	--grey: #eee;
+	--dark-grey: #AAAAAA;
+	--dark: #342E37;
+	--red: #DB504A;
+	--yellow: #FFCE26;
+	--light-yellow: #FFF2C6;
+	--orange: #FD7238;
+	--light-orange: #FFE0D3;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body.dark {
+	--light: #0C0C1E;
+	--grey: #060714;
+	--dark: #FBFBFB;
+}
+
+
+body {
+	background: var(--grey);
+	overflow-x: hidden;
+}
+
+
+
+
+/* SIDEBAR */
+#sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 280px;
+	height: 100%;
+	background: var(--light);
+	z-index: 2000;
+	font-family: var(--lato);
+	transition: .3s ease;
+	overflow-x: hidden;
+	scrollbar-width: none;
+}
+#sidebar::--webkit-scrollbar {
+	display: none;
+}
+#sidebar.hide {
+	width: 60px;
+}
+#sidebar .brand {
+	font-size: 24px;
+	font-weight: 700;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	color: var(--primary);
+	position: sticky;
+	top: 0;
+	left: 0;
+	background: var(--light);
+	z-index: 500;
+	padding-bottom: 20px;
+	box-sizing: content-box;
+	
+}
+#sidebar .brand span{
+	margin-left: 1rem	;
+}
+
+#sidebar .brand img{
+	width: 36px;
+	height: 36px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-left: 1rem;
+}
+
+#sidebar .brand .bx {
+	min-width: 60px;
+	display: flex;
+	justify-content: center;
+}
+#sidebar .side-menu {
+	width: 100%;
+	margin-top: 48px;
+}
+#sidebar .side-menu li {
+	height: 48px;
+	background: transparent;
+	margin-left: 6px;
+	border-radius: 48px 0 0 48px;
+	padding: 4px;
+}
+#sidebar .side-menu li.active {
+	background: var(--grey);
+	position: relative;
+}
+#sidebar .side-menu li.active::before {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	top: -40px;
+	right: 0;
+	box-shadow: 20px 20px 0 var(--grey);
+	z-index: -1;
+}
+#sidebar .side-menu li.active::after {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	bottom: -40px;
+	right: 0;
+	box-shadow: 20px -20px 0 var(--grey);
+	z-index: -1;
+}
+#sidebar .side-menu li a {
+	width: 100%;
+	height: 100%;
+	background: var(--light);
+	display: flex;
+	align-items: center;
+	border-radius: 48px;
+	font-size: 16px;
+	color: var(--dark);
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+#sidebar .side-menu.top li.active a {
+	color: var(--primary);
+	
+}
+/* #sidebar .side-menu.top li.active span{
+	margin-left: 1rem;
+} */
+#sidebar.hide .side-menu li a {
+	width: calc(48px - (4px * 2));
+	transition: width .3s ease;
+}
+#sidebar .side-menu li a.logout {
+	color: var(--red);
+}
+#sidebar .side-menu.top li a:hover {
+	color: var(--primary);
+}
+#sidebar .side-menu li a .material-icons-sharp{
+
+	min-width: calc(60px  - ((4px + 6px) * 2));
+	display: flex;
+	justify-content: center;
+}
+#sidebar .side-menu li a .text{
+	margin-left: 1rem;
+}
+/* SIDEBAR */
+
+
+
+
+
+/* CONTENT */
+#content {
+	position: relative;
+	width: calc(100% - 280px);
+	left: 280px;
+	transition: .3s ease;
+}
+#sidebar.hide ~ #content {
+	width: calc(100% - 60px);
+	left: 60px;
+}
+
+
+
+
+/* NAVBAR */
+#content nav {
+	height: 56px;
+	background: var(--light);
+	padding: 0 24px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+	font-family: var(--lato);
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+#content nav::before {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: -40px;
+	left: 0;
+	border-radius: 50%;
+	box-shadow: -20px -20px 0 var(--light);
+}
+#content nav a {
+	color: var(--dark);
+}
+#content nav .bx.bx-menu {
+	cursor: pointer;
+	color: var(--dark);
+}
+#content nav .nav-link {
+	font-size: 16px;
+	transition: .3s ease;
+}
+#content nav .nav-link:hover {
+	color: var(--primary);
+}
+#content nav form {
+	max-width: 400px;
+	width: 100%;
+	margin-right: auto;
+}
+#content nav form .form-input {
+	display: flex;
+	align-items: center;
+	height: 36px;
+}
+#content nav form .form-input input {
+	flex-grow: 1;
+	padding: 0 16px;
+	height: 100%;
+	border: none;
+	background: var(--grey);
+	border-radius: 36px 0 0 36px;
+	outline: none;
+	width: 100%;
+	color: var(--dark);
+}
+#content nav form .form-input button {
+	width: 36px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--primary);
+	color: var(--light);
+	font-size: 18px;
+	border: none;
+	outline: none;
+	border-radius: 0 36px 36px 0;
+	cursor: pointer;
+}
+#content nav .notification {
+	font-size: 20px;
+	position: relative;
+}
+#content nav .notification .num {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid var(--light);
+	background: var(--red);
+	color: var(--light);
+	font-weight: 700;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#content nav .profile img {
+	width: 36px;
+	height: 36px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+#content nav .switch-mode {
+	display: block;
+	min-width: 50px;
+	height: 25px;
+	border-radius: 25px;
+	background: var(--grey);
+	cursor: pointer;
+	position: relative;
+}
+#content nav .switch-mode::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	bottom: 2px;
+	width: calc(25px - 4px);
+	background: var(--primary);
+	border-radius: 50%;
+	transition: all .3s ease;
+}
+#content nav #switch-mode:checked + .switch-mode::before {
+	left: calc(100% - (25px - 4px) - 2px);
+}
+/* NAVBAR */
+
+
+
+
+
+/* MAIN */
+#content main {
+	width: 100%;
+	padding: 36px 24px;
+	font-family: var(--poppins);
+	max-height: calc(100vh - 56px);
+	overflow-y: auto;
+}
+#content main .head-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: 16px;
+	flex-wrap: wrap;
+}
+#content main .head-title .left h1 {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	color: var(--dark);
+}
+#content main .head-title .left .breadcrumb {
+	display: flex;
+	align-items: center;
+	grid-gap: 16px;
+}
+#content main .head-title .left .breadcrumb li {
+	color: var(--dark);
+}
+#content main .head-title .left .breadcrumb li a {
+	color: var(--dark-grey);
+	pointer-events: none;
+}
+#content main .head-title .left .breadcrumb li a.active {
+	color: var(--primary);
+	pointer-events: unset;
+}
+#content main .head-title .btn-download {
+	height: 36px;
+	padding: 0 16px;
+	border-radius: 36px;
+	background: var(--primary);
+	color: var(--light);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	font-weight: 500;
+}
+
+/*Inicio Cadastro Funcionário*/
+
+#content main .box-subscribe {
+	grid-gap: 24px;
+	margin-top: 36px;
+	height: 110vh;
+}
+
+#content main .box-subscribe {
+	padding: 24px;
+	background: var(--light);
+	border-radius: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	align-items: center;
+	grid-gap: 24px;
+	height: 900px;
+}
+
+#content main .box-subscribe .subscribe-left {
+    height: 100vh;
+    display: flex;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+    flex-direction: column;
+}
+
+#content main .box-subscribe .subscribe-left .title-subscribe {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#content main .box-subscribe .subscribe-left h3 {
+	text-align: center;
+	color: var(--primary);
+}
+
+#content main .box-subscribe .subscribe-left i {
+	margin: 15px;
+	color: var(--primary);
+}
+
+#content main .box-subscribe .subscribe-left img {
+	width: 35vw;
+	font-size: large;
+}
+
+#content main .box-subscribe .subscribe-right {
+	height: 100vh;
+	width: 100%;
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-content: center;
+    align-items: flex-start;
+	padding-top: 5px;
+}
+
+#content main .box-subscribe .subscribe-right form {
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 0px, 0px, 0px, 30px;
+}
+.inp_up{
+	color: var(--dark);
+    font-size: larger;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+.space-btn_up{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+}
+.btn_up{
+	background-color: #b1a156;
+    color: var(--light);
+    padding: 10px;
+    border-radius: 10px;
+	width: 20vw;
+	margin-top: 4vh;
+}
+#content main .box-subscribe .subscribe-right form .space-btn {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding-top: 30px;
+}
+
+#content main .box-subscribe .subscribe-right form .space-btn .btn {
+	width: 50%;
+	border-style: none;
+}
+
+#content main .box-subscribe .subscribe-right form .btn h3 {
+	background-color: var(--primary);
+	color: var(--light);
+	padding: 15px;
+	border-radius: 10px;
+}
+
+#content main .box-subscribe .subscribe-right form label {
+	color: var(--dark);
+	font-size: larger;
+	font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+#content main .box-subscribe .subscribe-right form input {
+	width: 90%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #F9F9F9;
+    color: var(--dark);
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#content main .box-subscribe .subscribe-right form select {
+	width: 90%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #F9F9F9;
+	color: var(--dark);
+    font-size: 12pt;
+	font-style: italic;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+	appearance: none;
+	background: url(../assets/imagens/seta.svg) no-repeat center right;
+    font-size: 15px;
+    padding-right: 30px;
+}
+
+#content main .box-subscribe li .bx {
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Fim Cadastro Funcionario*/
+
+/*Inicio Cadastro Máquina*/
+
+/*
+#content main .box-subscribe-machine {
+	grid-gap: 24px;
+
+	height: 90vh;
+}
+*/
+
+#content main .box-subscribe-machine {
+	padding: 24px;
+	background: var(--light);
+	border-radius: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	align-items: center;
+	margin-top: 36px;
+	grid-gap: 24px;
+	height: 700px;
+}
+
+#content main .box-subscribe-machine .subscribe-left {
+    height: 100vh;
+    display: flex;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+    flex-direction: column;
+}
+
+#content main .box-subscribe-machine .subscribe-left .title-subscribe {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#content main .box-subscribe-machine .subscribe-left h3 {
+	text-align: center;
+	color: var(--primary);
+}
+
+#content main .box-subscribe-machine .subscribe-left i {
+	margin: 15px;
+	color: var(--primary);
+}
+
+#content main .box-subscribe-machine .subscribe-left img {
+	width: 35vw;
+	font-size: large;
+}
+
+#content main .box-subscribe-machine .subscribe-right {
+	height: 100vh;
+	width: 100%;
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-content: center;
+    align-items: flex-start;
+	padding-top: 5px;
+}
+
+#content main .box-subscribe-machine .subscribe-right form {
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 0px, 0px, 0px, 30px;
+}
+
+#content main .box-subscribe-machine .subscribe-right form .space-btn {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding-top: 30px;
+}
+
+#content main .box-subscribe-machine .subscribe-right form .space-btn .btn {
+	width: 50%;
+	border-style: none;
+}
+
+#content main .box-subscribe-machine .subscribe-right form .btn h3 {
+	background-color: var(--primary);
+	color: var(--light);
+	padding: 15px;
+	border-radius: 10px;
+}
+
+#content main .box-subscribe-machine .subscribe-right form label {
+	color: var(--dark);
+	font-size: larger;
+	font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+#content main .box-subscribe-machine .subscribe-right form .agrupamento-cadastro-componentes{
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+
+#content main .box-subscribe-machine .subscribe-right form .titulo-dados-componentes{
+	width: 90%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+}
+
+#content main .box-subscribe-machine .subscribe-right form .dados-componentes{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+	padding: 10px;
+}
+
+#content main .box-subscribe-machine .subscribe-right form .input-geral {
+	width: 90%;
+}
+
+#content main .box-subscribe-machine .subscribe-right form input {
+	width: 30%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #F9F9F9;
+    color: var(--dark);
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#content main .box-subscribe-machine .subscribe-right form select {
+	width: 30%;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #F9F9F9;
+	color: var(--dark);
+    font-size: 12pt;
+	font-style: italic;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+	appearance: none;
+	background: url(../assets/imagens/seta.svg) no-repeat center right;
+    font-size: 15px;
+    padding-right: 30px;
+}
+
+#content main .box-subscribe-machine li .bx {
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Fim Cadastro Máquina*/
+
+
+#content main .box-subscribe li:nth-child(1) .bx {
+	background: var(--light-blue);
+	color: var(--primary);
+}
+#content main .box-subscribe li:nth-child(2) .bx {
+	background: var(--light-yellow);
+	color: var(--yellow);
+}
+#content main .box-subscribe li:nth-child(3) .bx {
+	background: var(--light-orange);
+	color: var(--orange);
+}
+#content main .box-subscribe li .text h3 {
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--dark);
+	margin-left: 3rem;
+}
+#content main .box-subscribe li .text p {
+	color: var(--dark);	
+}
+
+#content main .box-subscribe .div-title{
+	display: flex;
+	align-items: center;
+}
+
+
+
+#content main .box-subscribe > div span{
+    background-color: coral;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size:2rem ;
+}
+
+
+#content main .table-data {
+	display: flex;
+	flex-wrap: wrap;
+	grid-gap: 24px;
+	margin-top: 24px;
+	width: 100%;
+	color: var(--dark);
+}
+#content main .table-data > div {
+	border-radius: 20px;
+	background: var(--light);
+	padding: 24px;
+	overflow-x: auto;
+}
+#content main .table-data .head {
+	display: flex;
+	align-items: center;
+	grid-gap: 16px;
+	margin-bottom: 24px;
+}
+#content main .table-data .head h3 {
+	margin-right: auto;
+	font-size: 24px;
+	font-weight: 600;
+}
+#content main .table-data .head .bx {
+	cursor: pointer;
+}
+
+#content main .table-data .order {
+	margin-top: 2rem;
+	flex-grow: 1;
+	flex-basis: 500px;
+}
+
+
+#content main .table-data .order table {
+	width: 100%;
+	border-collapse: collapse;
+}
+#content main .table-data .order table th {
+	padding-bottom: 12px;
+	font-size: 13px;
+	text-align: left;
+	border-bottom: 1px solid var(--grey);
+}
+#content main .table-data .order table th {
+	padding: 14px 0;
+	text-align: center;
+	
+}
+#content main .table-data .order table tr td:first-child {
+	/* display: flex; */
+	align-items: center;
+	grid-gap: 12px;
+	padding-left: 6px;
+}
+#content main .table-data .order table td img {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+#content main .table-data .order table tbody tr:hover {
+	background: var(--grey);
+}
+#content main .table-data .order table tr td .status {
+	font-size: 10px;
+	padding: 6px 16px;
+	color: var(--light);
+	border-radius: 20px;
+	font-weight: 700;
+}
+#content main .table-data .order table th .status.process {
+	background: #DB504A;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#content main .table-data .order table tr td .status.process {
+	background: var(--yellow);
+}
+#content main .table-data .order table tr td .status.pending {
+	background: var(--orange);
+}
+
+
+#content main .table-data .todo {
+	margin-top: 2rem;
+	flex-grow: 1;
+	flex-basis: 300px;
+}
+#content main .table-data .todo .todo-list {
+	width: 100%;
+}
+#content main .table-data .todo .todo-list li {
+	width: 100%;
+	margin-bottom: 16px;
+	background: var(--grey);
+	border-radius: 10px;
+	padding: 14px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+#content main .table-data .todo .todo-list li span{
+	color: red	;
+}
+#content main .table-data .todo .todo-list li p{
+	margin-left: 1rem;
+}
+#content main .table-data .todo .todo-list li .bx {
+	cursor: pointer;
+}
+#content main .table-data .todo .todo-list li.completed {
+	border-left: 10px solid var(--primary);
+	height: 60px;
+}
+#content main .table-data .todo .todo-list li.not-completed {
+	border-left: 10px solid var(--orange);
+	height: 60px;
+}
+#content main .table-data .todo .todo-list li.completed img{
+	width: 36px;
+	height: 36px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+#content main .table-data .todo .todo-list li.not-completed img {
+	width: 36px;
+	height: 36px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+#content main .table-data .todo .todo-list li:last-child {
+	margin-bottom: 0;
+}
+
+#content .box-info-funcionario {
+	/* background-color: var(--light); */
+	width: 80%;
+	height: 100%;
+	border-radius: 15px;
+	margin-top: 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: var(--dark);
+}
+/* #content #deletar{
+	position: relative;
+	left: 1rem;
+	
+} */
+
+/* #content #editar{
+	position: relative;
+	left: 10rem;
+	background-color: #A4161A;
+	border-radius: 100%;
+	
+} */
+/* GIF AGARDANDO*/
+
+
+.loading-div {
+    width: 50px;
+    /* border: 3px solid pink; */
+    margin: auto;
+    display: none;
+  }
+  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+  }
+
+.wrapper{
+	display: inline-flex;
+	position: relative;
+	left: 5.5rem;
+	
+}
+
+ #deletar-div{
+	position: relative;
+	right: 5rem;
+	bottom: 1rem;
+}
+.nome{
+	position: relative;
+	right: 5rem;
+}
+
+.Email{
+	position: relative;
+	right: 7rem;
+}
+.funcao {
+	position: relative;
+	right: 4rem;
+}
+
+.title-email{
+	position: relative;
+	left: 4rem;
+}
+.title-nome{
+	position: relative;
+	right: 4rem;
+}
+.title-funcao{
+	position: relative;
+	left: 4rem;
+}
+.wrapper .icon{
+	margin: 0 20px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	z-index: 2;
+}
+
+.wrapper .icon span{
+	height: 40px;
+	width: 60px;
+	display: block;
+	background-color:var(--grey);
+	border-radius: 50%;
+	text-align: center;
+	/* position: relative;
+	left: 7rem; */
+	/* box-shadow: 0 10px 10px rgba(0,0,0,1); */
+}
+/* .wrapper .icon span #deletar-div{
+	position: relative;
+	right: ;
+} */
+.wrapper .icon i{
+	font-size: 25px;
+	position: relative;
+	margin-top: 0.5rem;
+}
+
+.wrapper .icon .tooltip{
+	position:absolute;
+	top: -30px;
+	background: var(--grey);
+	/* box-shadow: 0 3px 3px rgba(0,0,0,1); */
+	font-size: 15px;
+	border-radius: 25px;
+	padding: 10px 18px;
+	height: 30px;
+	font-size: 10px;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.4s cubic-bezier(0.68,-0.55, 0.265, 1.55);
+}
+.wrapper .icon .tooltip-editar{
+	position:absolute;
+	top: -30px;
+	background: var(--grey);
+	/* box-shadow: 0 3px 3px rgba(0,0,0,1); */
+	font-size: 15px;
+	border-radius: 25px;
+	padding: 10px 18px;
+	height: 30px;
+	font-size: 10px;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.4s cubic-bezier(0.68,-0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+	text-shadow: 0px -1px 0px rgba(0,0, 0, 0.4);
+}
+
+/* .wrapper .excluir:hover span,
+.wrapper .excluir:hover .tooltip,
+.wrapper .excluir:hover .tooltip::before {
+	background: #A4161A;
+	color: #ffff;
+} */
+
+span #editar-div.icons{
+	position: relative;
+	left: 10rem;
+}
+
+.wrapper .icon:hover .tooltip{
+	opacity: 1;
+	pointer-events: auto;
+}
+.wrapper .icon:hover .tooltip-editar{
+	opacity: 1;
+	pointer-events: auto;
+}
+
+#tooltip-excluir{
+	position: relative;
+	right: 5rem;
+	top:-18%;
+;
+}
+
+.wrapper .icon .tooltip::before{
+	position: absolute;
+	content: "";
+	height: 15px;
+	width: 15px;
+	background: var(--grey);
+	bottom: -8px;
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg);
+}
+
+.wrapper .icon .tooltip-editar::before{
+	position: absolute;
+	content: "";
+	height: 15px;
+	width: 15px;
+	background: var(--grey);
+	bottom: -8px;
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg);
+}
+
+#content .box-informacoes-cadastradas{
+	background-color: var(--light);
+	width: 100%;
+	height: 122px;
+	border-radius: 15px;
+	margin-top: 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: var(--dark);
+
+	/* margin-left: 2rem; */
+}
+
+#content .container-box-info-funcionario{
+	position: relative;
+	right: 3rem;
+	/* background-color: white; */
+}
+
+#content .box-informacoes-cadastradas span{
+	/* background-color: #A4161A; */
+	border-radius: 50%;
+	color: black;
+	margin-top: 0.5rem;
+	margin-left: 0.5rem;
+	width: 50px;
+	color: var(--dark);
+	cursor: pointer;
+}
+
+
+ #deletar-div-func{
+	position: relative;
+	right: 5rem;
+	bottom: 1rem;
+}
+#content .box-informacoes-cadastradas span:hover{
+	color: #A4161A;
+	
+}
+/* #content .material-icons-sharp {
+	box-shadow: inset 0 0 0 0 #54b3d6;
+	color: #54b3d6;
+	margin: 0 -.25rem;
+	padding: 0 .25rem;
+	transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+ .material-icons-sharp:hover {
+	box-shadow: inset 100px 0 0 0 #54b3d6;
+	color: white;
+  } */
+
+#content .titulos{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 80%;
+	color: #A4161A;
+}
+#content .title-two{
+     position: relative;
+	 left: 10.5rem;
+}
+#content .title-three{
+	position: relative;
+	 left: 10rem;
+}
+/* #content .title-one{
+	position: relative;
+	 left: 6.5rem;
+} */
+#content .img-edit{
+	width: 30px;
+	position: relative;
+	left: 6rem;
+	cursor: pointer;
+}
+
+#content .title-componente{
+	position: relative;
+	right: 4rem;
+}
+#content .title-ram{
+	position: relative;
+	left: -5.2rem;
+}
+
+#content .title-capacidade{
+	position: relative;
+	left: 10rem;
+}
+
+#content .title-alerta{
+	position: relative;
+	left: 1rem;
+}
+/* MAIN */
+/* CONTENT */
+
+
+@media screen and (max-width: 1600px){
+
+	#content .box-info-funcionario h1{
+		font-size: 15px;
+		text-align: left;
+	} 
+
+	#content .box-info-funcionario .identificacao{
+		margin-left: 3rem;
+	}
+	#content .titulos h4{
+		color: #A4161A;
+	}
+
+	#content .box-informacoes-cadastradas h4{
+		position: relative;
+		left: 0.1rem;
+		font-size: 13px ;
+	}
+
+	#content .box-informacoes-cadastradas .title-capacidade{
+		position: relative;
+		left: 10rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-alerta{
+		position: relative;
+		left: 15rem;
+	}
+
+	#content .box-informacoes-cadastradas.title-ram{
+		position: relative;
+		left: 3rem;
+	}
+	#content .box-informacoes-cadastradas.title-id{
+		position: relative;
+		left: 4rem;
+	}
+	#content .box-informacoes-cadastradas.title-nome{
+		position: relative;
+		left: 6rem;
+	}
+	#content .box-informacoes-cadastradas .title-cargo{
+		position: relative;
+		left: 3rem;
+	}
+	#content .box-informacoes-cadastradas .title-email{
+		position: relative;
+		left: 2rem;
+	}
+
+	#content .box-informacoes-cadastradas .titulos .img-edit{
+		width: 35px;
+		margin-left: 5rem;
+
+	}
+	
+	#content .box-informacoes-cadastradas .titulos .material-symbols-sharp{
+		width: 100px;
+		position: relative;
+		right: 2rem;
+	}
+
+	#deletar{
+		width: 50%;
+		position: relative;
+		left: 0.1rem;
+	}
+
+	#editar{
+		width: 50%;
+		position: relative;
+		left: -1.5rem;
+	}
+
+
+	.title-nome{
+		color: #060714;
+	}
+
+}
+
+@media screen and (max-width: 1535px) { 
+	#content main .box-subscribe-machine{
+		height: 700px;
+	}
+
+	#content main .box-subscribe{
+		height: 90vh;
+	}	
+	
+
+	#content h1.id{
+		font-size: 90%;
+		text-align: left;
+	} 
+
+	#content h1.nome{
+		font-size: 90%;
+		text-align: left;
+	} 
+
+	#content h1.email{
+		font-size: 90%;
+		text-align: left;
+	} 
+
+	#content h1.cargo{
+		font-size: 90%;
+		text-align: left;
+	} 
+
+
+	#content .box-info-funcionario .identificacao{
+		font-size: 90%;
+		text-align: left;
+	}
+	#content .titulos h4{
+		font-size: 80%;
+		color: #A4161A;
+	}
+
+	#content .box-informacoes-cadastradas h4{
+		position: relative;
+		left: 0.1rem;
+		font-size: 15px ;
+	}
+
+	#content .box-informacoes-cadastradas .title-capacidade{
+		position: relative;
+		left: 9.5rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-alerta{
+		position: relative;
+		left: 13rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-ram{
+		position: relative;
+		left: 3rem;
+	}
+
+	#content .box-informacoes-cadastradas .titulos .img-edit{
+		/* position: relative;
+		left: 80%; */
+		width: 30px;
+		/* margin-left: 0.1rem; */
+	}
+	
+	#content .box-informacoes-cadastradas .titulos .material-symbols-sharp{
+		width: 100px;
+		position: relative;
+		/* left: 0rem; */
+	}
+	#content .box-informacoes-cadastradas .titulo .icon-delete{
+		display: none;
+	}
+
+	#deletar{
+		width: 50%;
+		position: relative;
+		left: 0.1rem;
+	}
+
+	#editar{
+		width: 50%;
+		position: relative;
+		left: -1.5rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-nome{
+		position: relative;
+		left: 4rem;
+	}
+	
+	#content main .box-subscribe {
+		height: 620px;
+	}
+
+	 #editar-div-func{
+		position: relative;
+		right: 10rem;
+	} 
+	#deletar-div-func{
+		position: relative;
+		right: 10rem;
+		bottom: 1rem;
+	}
+	#tooltip-excluir{
+		position: relative;
+		right: 10rem;
+	}
+
+	.tooltip-editar{
+		position: relative;
+		right: 9.8rem;
+	} 
+
+	#content .box-informacoes-cadastradas .title-email{
+	  position: relative;
+	  left: 3.8rem;
+	}
+
+	.nome{
+		position: relative;
+		left: -1rem;
+	}
+	.Email{
+		position: relative;
+		left: -3rem;
+	}
+} 
+
+@media screen and (max-width: 884px) { 
+	#content main .box-subscribe{
+		grid-template-columns: 1fr;
+		height: 130vh;
+	}
+
+	#content main .box-subscribe .subscribe-right {
+		margin-top: -60vh;
+	}
+
+	#content main .box-subscribe-machine{
+		grid-template-columns: 1fr;
+		height: 120vh;
+	}
+
+	#content main .box-subscribe-machine .subscribe-right {
+		margin-top: -60vh;
+	}
+
+	#content .box-info-funcionario h1{
+		font-size: 100%;
+		text-align: left;
+		margin-left: 1rem;
+		
+	}
+	#content .box-informacoes-cadastradas .title-componente{
+		font-size: 15px;
+		text-align: center;
+	}
+
+	#content .box-info-funcionario .identificacao{
+		margin-left: 5rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-ram{
+		font-size: 15px;
+		position: relative;
+		right: 10rem;
+	}
+
+	#deletar{
+		width: 50%;
+		position: relative;
+		left: -0.200rem;
+	}
+
+	#editar{
+		width: 50%;
+		position: relative;
+		left: -0.200rem;
+	}
+
+	#content .box-informacoes-cadastradas span{
+		margin: 1rem;
+	}
+	
+	/* #content .box-informacoes-cadastradas .title-capacidade{
+		font-size: 15px;
+		position: relative;
+		left: 10rem;
+	} */
+}
+
+@media screen and (max-width: 768px) {
+	#sidebar {
+		width: 200px;
+	}
+
+	#content {
+		width: calc(100% - 60px);
+		left: 200px;
+	}
+
+	#content nav .nav-link {
+		display: none;
+	}
+
+	#content main .box-info #grficoCpu{
+		width: 100px;
+	}
+
+	#content .box-info-funcionario h1{
+		font-size: 90%;
+		text-align: left;
+	}
+
+	#deletar{
+		width: 50%;
+		position: relative;
+		left: -0.200rem;
+	}
+
+	#editar{
+		width: 50%;
+		position: relative;
+		left: -0.200rem;
+	}
+
+	#content .box-informacoes-cadastradas span{
+		margin: 1.5rem;
+	}
+
+	
+}
+
+
+@media screen and (max-width: 768px) {
+	#content main .box-subscribe{
+		grid-template-columns: 1fr;
+		height: 130vh;
+	}
+
+	#content main .box-subscribe .subscribe-right {
+		margin-top: -60vh;
+	}
+
+	#content main .box-subscribe-machine{
+		grid-template-columns: 1fr;
+		height: 125vh;
+	}
+
+	#content main .box-subscribe-machine .subscribe-right {
+		margin-top: -60vh;
+	}
+
+	#content .box-info-funcionario h1{
+		font-size: 90%;
+		text-align: left;
+		
+	} 
+
+	#content .box-info-funcionario .identificacao{
+		margin-left: 3rem;
+	}
+	#content .titulos h4{
+		font-size: 80%;
+		color: #A4161A;
+	}
+
+	#content .box-informacoes-cadastradas h4{
+		position: relative;
+		left: 3.8rem;
+		font-size: 15px ;
+	}
+
+	#content .box-informacoes-cadastradas .title-capacidade{
+		position: relative;
+		left: 4.5rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-alerta{
+		position: relative;
+		left: 10rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-ram{
+		position: relative;
+		left: 2rem;
+	}
+
+	#content .box-informacoes-cadastradas .titulos .img-edit{
+		/* position: relative;
+		left: 80%; */
+		width: 30px;
+		margin-right: 3rem;
+	}
+	
+	#content .box-informacoes-cadastradas .titulos .material-symbols-sharp{
+		width: 100px;
+		position: relative;
+		right: 2rem;
+	}
+	#content .box-informacoes-cadastradas .titulo .icon-delete{
+		display: none;
+	}
+	/* #content .titulos .title-componente{
+		position: relative;
+		left: 0.1rem;
+	}
+
+	#content .titulos .title-ram{
+		text-align: center;
+		position: relative;
+		left: 1rem;
+	}
+	#content .titulos .title-alerta{
+		position: relative;
+		right: 10rem;
+	} */
+}
+
+@media screen and (max-width: 576px) {
+	#content nav form .form-input input {
+		display: none;
+	}
+
+	#content nav form .form-input button {
+		width: auto;
+		height: auto;
+		background: transparent;
+		border-radius: none;
+		color: var(--dark);
+	}
+
+	#content nav form.show .form-input input {
+		display: block;
+		width: 100%;
+	}
+	#content nav form.show .form-input button {
+		width: 36px;
+		height: 100%;
+		border-radius: 0 36px 36px 0;
+		color: var(--light);
+		background: var(--red);
+	}
+
+	#content nav form.show ~ .notification,
+	#content nav form.show ~ .profile {
+		display: none;
+	}
+
+	#content main .box-info {
+		grid-template-columns: 1fr;
+		
+	}
+	#content main .box-info #grficoCpu{
+		width: 100px;
+	}
+
+	#content main .table-data .head {
+		min-width: 420px;
+	}
+	#content main .table-data .order table {
+		min-width: 420px;
+	}
+	#content main .table-data .todo .todo-list {
+		min-width: 420px;
+	}
+
+	#content main .box-subscribe{
+		grid-template-columns: 1fr;
+		height: 125vh;
+	}
+
+	#content main .box-subscribe .subscribe-left {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	#content main .box-subscribe .subscribe-left .title-subscribe {
+		width: 100%;
+	}
+
+	#content main .box-subscribe .subscribe-right {
+		margin-top: -65vh;
+	}
+
+	#content main .box-subscribe .subscribe-right form input {
+		width: 100%;
+	}
+
+	#content main .box-subscribe .subscribe-right form select {
+		width: 100%;
+	}
+
+	#content main .box-subscribe .subscribe-right form .btn {
+		width: 100%;
+	}
+/**/
+	#content main .box-subscribe-machine{
+		grid-template-columns: 1fr;
+		height: 125vh;
+	}
+
+	#content main .box-subscribe-machine .subscribe-left {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	#content main .box-subscribe-machine .subscribe-left .title-subscribe {
+		width: 100%;
+	}
+
+	#content main .box-subscribe-machine .subscribe-right {
+		margin-top: -65vh;
+	}
+
+	#content main .box-subscribe-machine .subscribe-right form input {
+		width: 100%;
+	}
+
+	#content main .box-subscribe-machine .subscribe-right form select {
+		width: 100%;
+	}
+
+	#content main .box-subscribe-machine .subscribe-right form .btn {
+		width: 100%;
+	}
+
+	#content .box-info-funcionario h1{
+		font-size: 80%;
+		text-align: left;
+	}
+
+	#content .titulos h4{
+		font-size: 80%;
+		color: #A4161A;
+	}
+
+	#content .box-informacoes-cadastradas h4{
+		position: relative;
+		left: 0.1rem;
+		font-size: 15px ;
+	}
+
+	#content .box-informacoes-cadastradas .title-capacidade{
+		position: relative;
+		left: 4.5rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-alerta{
+		position: relative;
+		left: 6rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-ram{
+		position: relative;
+		left: 2rem;
+	}
+
+	#content .box-informacoes-cadastradas .titulos .img-edit{
+		/* position: relative;
+		left: 80%; */
+		width: 30px;
+		margin-right: 3rem;
+	}
+	
+	#content .box-informacoes-cadastradas .titulos .material-symbols-sharp{
+		width: 100px;
+		position: relative;
+		right: 2rem;
+	}
+	
+}
+
+@media screen and (max-width:900px){
+	#content .box-info-funcionario h1{
+		font-size: 90%;
+		text-align: left;
+	}
+
+	#content .titulos h4{
+		font-size: 80%;
+		color: #A4161A;
+	}
+
+	#content .box-informacoes-cadastradas h4{
+		position: relative;
+		left: 0.1rem;
+		font-size: 15px ;
+	}
+
+	#content .box-informacoes-cadastradas .title-capacidade{
+		position: relative;
+		left: 8rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-alerta{
+		position: relative;
+		left: 12rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-ram{
+		position: relative;
+		left: 3rem;
+	}
+	
+
+	#content .box-informacoes-cadastradas .titulos .img-edit{
+		position: relative;
+		left: 4rem;
+		width: 20px;
+		
+	}
+	
+	#content .box-informacoes-cadastradas .titulos .material-symbols-sharp{
+		width: 30%;
+		position: relative;
+		right: 1rem;
+	}
+}
+@media screen and (maz-width: 980px) {
+	#content .box-info-funcionario h1{
+		font-size: 90%;
+		text-align: left;
+	}
+
+	#content .box-info-funcionario .identificacao{
+		margin-left: 3rem;
+	}
+	#content .titulos h4{
+		font-size: 80%;
+		color: #A4161A;
+	}
+
+	#content .box-informacoes-cadastradas h4{
+		position: relative;
+		left: 0.1rem;
+		font-size: 15px ;
+	}
+
+	#content .box-informacoes-cadastradas .title-capacidade{
+		position: relative;
+		left: 4.5rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-alerta{
+		position: relative;
+		left: 6rem;
+	}
+
+	#content .box-informacoes-cadastradas .title-ram{
+		position: relative;
+		left: 2rem;
+	}
+
+	#content .box-informacoes-cadastradas .titulos .img-edit{
+		/* position: relative;
+		left: 80%; */
+		width: 30px;
+		margin-right: 3rem;
+	}
+	
+	#content .box-informacoes-cadastradas .titulos .material-symbols-sharp{
+		width: 100px;
+		position: relative;
+		right: 2rem;
+	}
+	#content .box-informacoes-cadastradas .titulo .icon-delete{
+		display: none;
+	}
+
+   }
+
+

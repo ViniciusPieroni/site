@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DataCat | Cadastro</title>
+
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="icon" href="./assets/imagens/logo/kisspng-whiskers-black-cat-logo-computer-icons-holding-cat-5b2478eb76bcb4.4233985815291169074864.png">
+    <link rel="stylesheet" href="./css/teste.css">
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="advange">
+    <div class="advange_item face">
+        <div class="advange_content">
+            <div id="lista"></div>
+            teste
+        </div>
+    </div>
+    <div class="advange_item face2">
+        <div class="advange_content">
+            <br><br>
+            
+    
+            <form action="" id="form_upDateUsuario" method="post" onsubmit="return upDateUsuario()">
+                <label  for="">Id</label>
+                <input name="idUsuario" type="text"  maxlength="15">
+                <label  for="">Nome</label>
+                <input name="nomeUsuario" type="text"  maxlength="15">
+                <label for="">Permissão</label>
+                <select name="cargo" id="cargo"  maxlength="45">
+                    <option value="Técnico de Infraestrutura">Técnico de Infraestrutura</option>
+                    <option value="Gerente de Infraestrutura">Gerente de Infraestrutura</option>
+                    <option value="Gerente Bancário">Gerente Bancário</option>
+                    <option value="Bancário">Bancário</option>
+                </select> 
+                <label for="">Email</label>
+                <input name="email" id="email" type="email"  maxlength="45">
+                <label for="">Senha</label>
+                <input name="senha" id="senha" type="password"  maxlength="45">
+               
+                <a href="#" class="advange_link btn">Editar</a>
+                <br>
+            </form>
+            
+        </div>
+    </div>
+</div>
+</div>
+                
+
+</body>
+
+</html>
+<script src="./js/Listar.js"></script>
+<script>
+    function upDate() {
+
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_upDate")));
+
+        var idfuncionario = formulario.get("idfuncionario");
+        var nomefuncionario = formulario.get("nomefuncionario");
+        var cargo = formulario.get("cargo");
+        var email = formulario.get("email");
+        var senha = formulario.get("senha");       
+
+
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (idfuncionario == "" || nomefuncionario == "" || cargo == "" || email == "" || senha == "") {
+
+            window.alert("Preencha todos os campos para prosseguir!");
+            if (idfuncionario == "") {
+                console.log('id está em branco')
+            }
+            if (nomefuncionario == "") {
+                console.log('nome está em branco')
+            }
+            if (cargo == "") {
+                console.log('email está em branco')
+            }
+            if (senha == "") {
+                console.log('senha está em branco')
+            }
+            return false;
+        }
+
+        if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            return false;
+        }
+
+        fetch("/usuarios/upDate", {
+            method: "POST",
+            body: formulario
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                window.alert("upDate realizado com sucesso!");
+            } else {
+                throw ("Houve um erro ao tentar realizar o upDate!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+
+}
+
+</script>
