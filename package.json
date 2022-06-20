@@ -1,6 +1,6 @@
 {
-  "nome": "ProjetoGrupo4", 
-  "version": "0.0.1",
+  "nome": "site", 
+  "version": "1.0",
   "private": "true",
   "scripts": {
       "start": "node ./Site/bin/www",
